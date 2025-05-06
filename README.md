@@ -64,11 +64,21 @@ Tests include:
 
 Located in `benchmark/kvstore_bench.cpp`.
 
-Benchmarks:
+Benchmarks include:
 
 - `put()`
 - `get()`
 - `remove()`
+
+In addition to basic performance testing, I implemented a multithreaded benchmark using `std::async` to simulate concurrent access. This allows `KVStore` operations like `put()` and `get()` to run in parallel threads, testing how the store behaves under simultaneous usage.
+
+The purpose was to:
+
+- Explore **modern C++ concurrency tools** like `std::async`
+- Measure how `KVStore` handles parallel inserts and lookups
+- Simulate real-world usage patterns where multiple clients access the store at once
+
+This deepened my understanding of concurrency and performance tradeoffs in systems programming.
 
 ## 💻 CLI Usage
 
