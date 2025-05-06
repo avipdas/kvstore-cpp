@@ -31,3 +31,7 @@ gtest_discover_tests(kvstore_test)
 # Benchmark
 add_executable(kvstore_bench benchmark/kvstore_bench.cpp)
 target_link_libraries(kvstore_bench kvstore benchmark::benchmark)
+
+# CLI Application
+add_executable(kvstore_cli main.cpp)
+target_link_libraries(k
