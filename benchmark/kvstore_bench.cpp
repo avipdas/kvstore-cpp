@@ -1,30 +1,47 @@
 #include <benchmark/benchmark.h>
+#include <future>
 #include "../kvstore.h"
 
-static void BM_Put(benchmark::State& state) {
-  KVStore kv;
-  for (auto _ : state) {
-    kv.put("key", "value");
-  }
-}
-BENCHMARK(BM_Put);
-
-static void BM_Get(benchmark::State& state) {
-  KVStore kv;
-  kv.put("key", "value");
-  for (auto _ : state) {
-    benchmark::DoNotOptimize(kv.get("key"));
-  }
-}
-BENCHMARK(BM_Get);
-
-static void BM_Remove(benchmark::State& state) {
+static void BM_ConcurrentPut(benchmark::State& state) {
   for (auto _ : state) {
     KVStore kv;
-    kv.put("key", "value");
-    kv.remove("key");
+
+    auto put1 = std::async(std::launch::async, [&kv] {
+      for (int i = 0; i < 100; ++i)
+        kv.put("key" + std::to_string(i), "A");
+    });
+
+    auto put2 = std::async(std::launch::async, [&kv] {
+      for (int i = 100; i < 200; ++i)
+        kv.put("key" + std::to_string(i), "B");
+    });
+
+    put1.get();
+    put2.get();
   }
 }
-BENCHMARK(BM_Remove);
+BENCHMARK(BM_ConcurrentPut);
+
+static void BM_ConcurrentGet(benchmark::State& state) {
+  KVStore kv;
+  for (int i = 0; i < 200; ++i)
+    kv.put("key" + std::to_string(i), "val");
+
+  for (auto _ : state) {
+    auto get1 = std::async(std::launch::async, [&kv] {
+      for (int i = 0; i < 100; ++i)
+        benchmark::DoNotOptimize(kv.get("key" + std::to_string(i)));
+    });
+
+    auto get2 = std::async(std::launch::async, [&kv] {
+      for (int i = 100; i < 200; ++i)
+        benchmark::DoNotOptimize(kv.get("key" + std::to_string(i)));
+    });
+
+    get1.get();
+    get2.get();
+  }
+}
+BENCHMARK(BM_ConcurrentGet);
 
 BENCHMARK_MAIN();
