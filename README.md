@@ -35,17 +35,17 @@ These are auto-downloaded using CMake’s FetchContent.
 
 ## 🔨 How to Build and Run
 
-1. Build the project:
-cmake -S . -B build
+1. Build the project:  
+cmake -S . -B build  
 cmake --build build
 
-2. Run tests:
+2. Run tests:  
 ./build/kvstore_test
 
-3. Run benchmarks:
+3. Run benchmarks:  
 ./build/kvstore_bench
 
-4. Run CLI:
+4. Run CLI:  
 ./build/kvstore_cli
 
 
