@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include "kvstore.h"
+#include <sstream>
+
 
 int main() {
   KVStore kv;
