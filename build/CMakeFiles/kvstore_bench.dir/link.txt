@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/kvstore_bench.dir/benchmark/kvstore_bench.cpp.o -o kvstore_bench  libkvstore.a _deps/benchmark-build/src/libbenchmark.a -lrt 

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/mnt/c/Users/avipd/OneDrive/Documents/kvstore-cpp/build/_deps/benchmark-subbuild/CMakeFiles/benchmark-populate"
+		},
+		{
+			"file" : "/mnt/c/Users/avipd/OneDrive/Documents/kvstore-cpp/build/_deps/benchmark-subbuild/CMakeFiles/benchmark-populate.rule"
+		},
+		{
+			"file" : "/mnt/c/Users/avipd/OneDrive/Documents/kvstore-cpp/build/_deps/benchmark-subbuild/CMakeFiles/benchmark-populate-complete.rule"
+		},
+		{
+			"file" : "/mnt/c/Users/avipd/OneDrive/Documents/kvstore-cpp/build/_deps/benchmark-subbuild/benchmark-populate-prefix/src/benchmark-populate-stamp/benchmark-populate-build.rule"
+		},
+		{
+			"file" : "/mnt/c/Users/avipd/OneDrive/Documents/kvstore-cpp/build/_deps/benchmark-subbuild/benchmark-populate-prefix/src/benchmark-populate-stamp/benchmark-populate-configure.rule"
+		},
+		{
+			"file" : "/mnt/c/Users/avipd/OneDrive/Documents/kvstore-cpp/build/_deps/benchmark-subbuild/benchmark-populate-prefix/src/benchmark-populate-stamp/benchmark-populate-download.rule"
+		},
+		{
+			"file" : "/mnt/c/Users/avipd/OneDrive/Documents/kvstore-cpp/build/_deps/benchmark-subbuild/benchmark-populate-prefix/src/benchmark-populate-stamp/benchmark-populate-install.rule"
+		},
+		{
+			"file" : "/mnt/c/Users/avipd/OneDrive/Documents/kvstore-cpp/build/_deps/benchmark-subbuild/benchmark-populate-prefix/src/benchmark-populate-stamp/benchmark-populate-mkdir.rule"
+		},
+		{
+			"file" : "/mnt/c/Users/avipd/OneDrive/Documents/kvstore-cpp/build/_deps/benchmark-subbuild/benchmark-populate-prefix/src/benchmark-populate-stamp/benchmark-populate-patch.rule"
+		},
+		{
+			"file" : "/mnt/c/Users/avipd/OneDrive/Documents/kvstore-cpp/build/_deps/benchmark-subbuild/benchmark-populate-prefix/src/benchmark-populate-stamp/benchmark-populate-test.rule"
+		},
+		{
+			"file" : "/mnt/c/Users/avipd/OneDrive/Documents/kvstore-cpp/build/_deps/benchmark-subbuild/benchmark-populate-prefix/src/benchmark-populate-stamp/benchmark-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"benchmark-populate"
+		],
+		"name" : "benchmark-populate"
+	}
+}
